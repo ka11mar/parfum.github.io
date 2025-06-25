@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Каталог парфюмерии — широкий выбор оригинальных ароматов от ведущих брендов">
+    <meta name="keywords" content="парфюмерия, духи, ароматы, каталог парфюмерии">
+    <title>Каталог парфюмерии | Мир Парфюмерии</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="css/brands.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/catalog.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="Мир Парфюмерии" /></a>
+            <h1>Мир Парфюмерии</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="catalog.html" class="active"><i class="fas fa-store"></i> Каталог</a></li>
+                <li><a href="brands.html"><i class="fas fa-tags"></i> Бренды</a></li>
+                <li><a href="articles.html"><i class="fas fa-newspaper"></i> Статьи</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> О сайте</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Контакты</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Корзина</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="brands-hero">
+            <div class="hero-content">
+                <h1>Каталог ароматов</h1>
+                <p>Откройте для себя коллекцию премиальной парфюмерии от ведущих мировых брендов. У нас представлены только оригинальные ароматы.</p>
+                <div class="brands-search">
+                    <input type="text" placeholder="Поиск ароматов...">
+                    <button><i class="fas fa-search"></i> Найти</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="brands-container">
+            <aside class="brands-sidebar">
+                <div class="sidebar-section">
+                    <h3><i class="fas fa-th-large"></i> Категории</h3>
+                    <div class="brands-categories">
+                        <button class="category-btn active">
+                            <i class="fas fa-list"></i> Все ароматы
+                        </button>
+                        <button class="category-btn">
+                            <i class="fas fa-female"></i> Женские
+                        </button>
+                        <button class="category-btn">
+                            <i class="fas fa-male"></i> Мужские
+                        </button>
+                        <button class="category-btn">
+                            <i class="fas fa-venus-mars"></i> Унисекс
+                        </button>
+                        <button class="category-btn">
+                            <i class="fas fa-star"></i> Нишевые
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3><i class="fas fa-filter"></i> Фильтры</h3>
+                    <div class="filter-group">
+                        <label>Ценовой диапазон</label>
+                        <select>
+                            <option value="">Все цены</option>
+                            <option value="0-5000">До 5000 ₽</option>
+                            <option value="5000-10000">5000-10000 ₽</option>
+                            <option value="10000-20000">10000-20000 ₽</option>
+                            <option value="20000+">Более 20000 ₽</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Объем</label>
+                        <select>
+                            <option value="">Все объемы</option>
+                            <option value="30">30 мл</option>
+                            <option value="50">50 мл</option>
+                            <option value="100">100 мл</option>
+                            <option value="150">150 мл</option>
+                        </select>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="brands-main">
+                <div class="brands-grid">
+                    <!-- Женские ароматы -->
+                    <div class="brand-card" data-category="женские">
+                        <div class="brand-image">
+                            <img src="img/chanel-no5.jpg" alt="Chanel No 5" />
+                        </div>
+                        <div class="brand-info">
+                            <h2>Chanel No 5</h2>
+                            <p>Легендарный женский аромат с нотами альдегидов и жасмина</p>
+                            <div class="brand-stats">
+                                <span><i class="fas fa-star"></i> 4.9/5.0</span>
+                                <span><i class="fas fa-flask"></i> 100 мл</span>
+                            </div>
+                            <button class="btn-add-to-cart" data-id="chanel-no5" data-name="Chanel No 5" data-price="9500" data-image="img/chanel-no5.jpg" data-volume="100">Купить</button>
+                        </div>
+                    </div>
+
+                    <div class="brand-card" data-category="женские">
+                        <div class="brand-image">
+                            <img src="img/dior-jadore.jpg" alt="Dior J'adore" />
+                        </div>
+                        <div class="brand-info">
+                            <h2>Dior J'adore</h2>
+                            <p>Роскошный цветочный аромат с нотами жасмина и иланг-иланга</p>
+                            <div class="brand-stats">
+                                <span><i class="fas fa-star"></i> 4.8/5.0</span>
+                                <span><i class="fas fa-flask"></i> 100 мл</span>
+                            </div>
+                            <button class="btn-add-to-cart" data-id="dior-jadore" data-name="Dior J'adore" data-price="8900" data-image="img/dior-jadore.jpg" data-volume="100">Купить</button>
+                        </div>
+                    </div>
+
+                    <!-- Мужские ароматы -->
+                    <div class="brand-card" data-category="мужские">
+                        <div class="brand-image">
+                            <img src="img/dior-sauvage.jpg" alt="Dior Sauvage" />
+                        </div>
+                        <div class="brand-info">
+                            <h2>Dior Sauvage</h2>
+                            <p>Мужской аромат с нотками бергамота и амброксана</p>
+                            <div class="brand-stats">
+                                <span><i class="fas fa-star"></i> 4.8/5.0</span>
+                                <span><i class="fas fa-flask"></i> 100 мл</span>
+                            </div>
+                            <button class="btn-add-to-cart" data-id="dior-sauvage" data-name="Dior Sauvage" data-price="8900" data-image="img/dior-sauvage.jpg" data-volume="100">Купить</button>
+                        </div>
+                    </div>
+
+                    <div class="brand-card" data-category="мужские">
+                        <div class="brand-image">
+                            <img src="img/creed-aventus.jpg" alt="Creed Aventus" />
+                        </div>
+                        <div class="brand-info">
+                            <h2>Creed Aventus</h2>
+                            <p>Культовый мужской аромат с фруктовыми нотами</p>
+                            <div class="brand-stats">
+                                <span><i class="fas fa-star"></i> 4.9/5.0</span>
+                                <span><i class="fas fa-flask"></i> 100 мл</span>
+                            </div>
+                            <button class="btn-add-to-cart" data-id="creed-aventus" data-name="Creed Aventus" data-price="28900" data-image="img/creed-aventus.jpg" data-volume="100">Купить</button>
+                        </div>
+                    </div>
+
+                    <!-- Унисекс ароматы -->
+                    <div class="brand-card" data-category="унисекс">
+                        <div class="brand-image">
+                            <img src="img/byredo-gypsy-water.jpg" alt="Byredo Gypsy Water" />
+                        </div>
+                        <div class="brand-info">
+                            <h2>Byredo Gypsy Water</h2>
+                            <p>Унисекс аромат с древесными нотами</p>
+                            <div class="brand-stats">
+                                <span><i class="fas fa-star"></i> 4.7/5.0</span>
+                                <span><i class="fas fa-flask"></i> 100 мл</span>
+                            </div>
+                            <button class="btn-add-to-cart" data-id="byredo-gypsy-water" data-name="Byredo Gypsy Water" data-price="15800" data-image="img/byredo-gypsy-water.jpg" data-volume="100">Купить</button>
+                        </div>
+                    </div>
+
+                    <div class="brand-card" data-category="унисекс">
+                        <div class="brand-image">
+                            <img src="img/le-labo-santal.jpg" alt="Le Labo Santal 33" />
+                        </div>
+                        <div class="brand-info">
+                            <h2>Le Labo Santal 33</h2>
+                            <p>Культовый унисекс аромат с нотами сандала</p>
+                            <div class="brand-stats">
+                                <span><i class="fas fa-star"></i> 4.8/5.0</span>
+                                <span><i class="fas fa-flask"></i> 100 мл</span>
+                            </div>
+                            <button class="btn-add-to-cart" data-id="le-labo-santal" data-name="Le Labo Santal 33" data-price="19800" data-image="img/le-labo-santal.jpg" data-volume="100">Купить</button>
+                        </div>
+                    </div>
+
+                    <!-- Нишевые ароматы -->
+                    <div class="brand-card" data-category="нишевые">
+                        <div class="brand-image">
+                            <img src="img/penhaligons-halfeti.jpg" alt="Penhaligon's Halfeti" />
+                        </div>
+                        <div class="brand-info">
+                            <h2>Penhaligon's Halfeti</h2>
+                            <p>Роскошный восточный аромат с нотами розы и уда</p>
+                            <div class="brand-stats">
+                                <span><i class="fas fa-star"></i> 4.9/5.0</span>
+                                <span><i class="fas fa-flask"></i> 100 мл</span>
+                            </div>
+                            <button class="btn-add-to-cart" data-id="penhaligons-halfeti" data-name="Penhaligon's Halfeti" data-price="15800" data-image="img/penhaligons-halfeti.jpg" data-volume="100">Купить</button>
+                        </div>
+                    </div>
+
+                    <div class="brand-card" data-category="нишевые">
+                        <div class="brand-image">
+                            <img src="img/amouage.jpg" alt="Amouage Reflection Man" />
+                        </div>
+                        <div class="brand-info">
+                            <h2>Amouage Reflection Man</h2>
+                            <p>Элегантный мужской аромат с нотами жасмина и сандала</p>
+                            <div class="brand-stats">
+                                <span><i class="fas fa-star"></i> 4.7/5.0</span>
+                                <span><i class="fas fa-flask"></i> 100 мл</span>
+                            </div>
+                            <button class="btn-add-to-cart" data-id="amouage-reflection" data-name="Amouage Reflection Man" data-price="22900" data-image="img/amouage.jpg" data-volume="100">Купить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pagination">
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>О компании</h4>
+                <p>Мир Парфюмерии — ваш надежный партнер в мире ароматов с 2010 года.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Контакты</h4>
+                <p><i class="fas fa-phone"></i> +7 (951) 074-24-72</p>
+                <p><i class="fas fa-envelope"></i> samohvalovkirill097@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Мы в соцсетях</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Мир Парфюмерии. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html> 

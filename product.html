@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товар | Мир Парфюмерии</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="Мир Парфюмерии" /></a>
+            <h1>Мир Парфюмерии</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="catalog.html"><i class="fas fa-store"></i> Каталог</a></li>
+                <li><a href="brands.html"><i class="fas fa-tags"></i> Бренды</a></li>
+                <li><a href="articles.html"><i class="fas fa-newspaper"></i> Статьи</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> О компании</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Контакты</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Корзина</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="product-section">
+            <div class="product-container">
+                <div class="product-gallery">
+                    <div class="product-main-image">
+                        <img src="" alt="" id="mainImage">
+                    </div>
+                    <div class="product-thumbnails" id="thumbnails">
+                        <!-- Миниатюры будут добавлены через JavaScript -->
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <nav class="breadcrumbs">
+                        <a href="index.html">Главная</a>
+                        <i class="fas fa-chevron-right"></i>
+                        <a href="catalog.html">Каталог</a>
+                        <i class="fas fa-chevron-right"></i>
+                        <a href="#" id="brandLink">Бренд</a>
+                        <i class="fas fa-chevron-right"></i>
+                        <span id="productName">Название товара</span>
+                    </nav>
+
+                    <h1 id="productTitle">Название товара</h1>
+                    <div class="product-brand" id="productBrand">Бренд</div>
+
+                    <div class="product-price-block">
+                        <div class="product-price" id="productPrice">0 ₽</div>
+                        <div class="product-old-price" id="productOldPrice"></div>
+                    </div>
+
+                    <div class="product-description" id="productDescription">
+                        Описание товара будет загружено через JavaScript
+                    </div>
+
+                    <div class="product-options">
+                        <div class="option-group">
+                            <label>Объем</label>
+                            <div class="volume-options" id="volumeOptions">
+                                <!-- Опции объема будут добавлены через JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-features">
+                        <div class="feature">
+                            <i class="fas fa-truck"></i>
+                            <span>Бесплатная доставка от 5000 ₽</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Гарантия подлинности</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-undo"></i>
+                            <span>Возврат в течение 14 дней</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>О компании</h4>
+                <p>Мир Парфюмерии — ваш надежный партнер в мире ароматов с 2010 года.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Контакты</h4>
+                <p><i class="fas fa-phone"></i> +7 (951) 074-24-72</p>
+                <p><i class="fas fa-envelope"></i> <a
+                        href="mailto:samohvalovkirill097@gmail.com">samohvalovkirill097@gmail.com</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Ароматная, д. 15</p>
+            </div>
+            <div class="footer-section">
+                <h4>Мы в соцсетях</h4>
+                <div class="social-links">
+                    <a href="https://vk.com/stopplska11mar" target="_blank"><i class="fab fa-vk"></i></a>
+                    <a href="https://t.me/holinightt" target="_blank"><i class="fab fa-telegram"></i></a>
+                    <a href="https://instagram.com/mirparfyumerii" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/79510742472" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Мир Парфюмерии. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Получение параметров из URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+
+        // Данные товаров (в реальном проекте будут загружаться с сервера)
+        const products = {
+            'chanel-no5': {
+                id: 'chanel-no5',
+                name: 'Chanel N°5',
+                brand: 'Chanel',
+                brandUrl: 'brands/chanel.html',
+                price: 9500,
+                oldPrice: 12000,
+                description: 'Легендарный аромат Chanel N°5 — это воплощение женственности и элегантности. Созданный в 1921 году, он остается одним из самых узнаваемых и любимых парфюмов в мире.',
+                images: [
+                    'images/products/chanel-no5-1.jpg',
+                    'images/products/chanel-no5-2.jpg',
+                    'images/products/chanel-no5-3.jpg'
+                ],
+                volumes: [
+                    { value: '50', price: 7500 },
+                    { value: '100', price: 9500 },
+                    { value: '200', price: 15000 }
+                ]
+            },
+            'dior-sauvage': {
+                id: 'dior-sauvage',
+                name: 'Dior Sauvage',
+                brand: 'Dior',
+                brandUrl: 'brands/dior.html',
+                price: 8500,
+                oldPrice: 10000,
+                description: 'Dior Sauvage — это современный аромат, сочетающий в себе свежесть цитрусовых нот и глубину амброксана. Идеальный выбор для уверенного в себе мужчины.',
+                images: [
+                    'images/products/dior-sauvage-1.jpg',
+                    'images/products/dior-sauvage-2.jpg',
+                    'images/products/dior-sauvage-3.jpg'
+                ],
+                volumes: [
+                    { value: '60', price: 6500 },
+                    { value: '100', price: 8500 },
+                    { value: '200', price: 13000 }
+                ]
+            }
+        };
+
+        // Загрузка данных товара
+        function loadProduct() {
+            const product = products[productId];
+            if (!product) {
+                window.location.href = 'catalog.html';
+                return;
+            }
+
+            // Заполнение данных на странице
+            document.title = `${product.name} | Мир Парфюмерии`;
+            document.getElementById('productName').textContent = product.name;
+            document.getElementById('productTitle').textContent = product.name;
+            document.getElementById('productBrand').textContent = product.brand;
+            document.getElementById('productDescription').textContent = product.description;
+            document.getElementById('mainImage').src = product.images[0];
+            document.getElementById('mainImage').alt = product.name;
+
+            // Обновление цены
+            updatePrice(product.volumes[0].price);
+
+            // Создание миниатюр
+            const thumbnailsContainer = document.getElementById('thumbnails');
+            product.images.forEach((image, index) => {
+                const thumbnail = document.createElement('img');
+                thumbnail.src = image;
+                thumbnail.alt = `${product.name} - фото ${index + 1}`;
+                thumbnail.onclick = () => document.getElementById('mainImage').src = image;
+                thumbnailsContainer.appendChild(thumbnail);
+            });
+
+            // Создание опций объема
+            const volumeOptions = document.getElementById('volumeOptions');
+            product.volumes.forEach(volume => {
+                const option = document.createElement('button');
+                option.className = 'volume-option';
+                option.textContent = `${volume.value} мл`;
+                option.onclick = () => {
+                    document.querySelectorAll('.volume-option').forEach(btn => btn.classList.remove('active'));
+                    option.classList.add('active');
+                    updatePrice(volume.price);
+                };
+                if (volume.value === '100') option.classList.add('active');
+                volumeOptions.appendChild(option);
+            });
+        }
+
+        // Обновление цены
+        function updatePrice(price) {
+            const product = products[productId];
+            document.getElementById('productPrice').textContent = `${price.toLocaleString('ru-RU')} ₽`;
+            if (product.oldPrice) {
+                document.getElementById('productOldPrice').textContent = `${product.oldPrice.toLocaleString('ru-RU')} ₽`;
+            }
+        }
+
+        // Загрузка товара при загрузке страницы
+        document.addEventListener('DOMContentLoaded', loadProduct);
+    </script>
+</body>
+
+</html>

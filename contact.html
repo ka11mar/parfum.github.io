@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Свяжитесь с нами - Мир Парфюмерии. Контактная информация, форма обратной связи и адреса магазинов.">
+    <meta name="keywords" content="контакты, обратная связь, адрес магазина, мир парфюмерии, связь с нами">
+    <title>Контакты | Мир Парфюмерии</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="css/reviews.css">
+    <link rel="stylesheet" href="css/notifications.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/reviews.js" defer></script>
+    <!-- Подключаем API Яндекс.Карт -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_API_ключ&lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="Мир Парфюмерии" /></a>
+            <h1>Мир Парфюмерии</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="catalog.html"><i class="fas fa-store"></i> Каталог</a></li>
+                <li><a href="brands.html"><i class="fas fa-tags"></i> Бренды</a></li>
+                <li><a href="articles.html"><i class="fas fa-newspaper"></i> Статьи</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> О сайте</a></li>
+                <li><a href="contact.html" class="active"><i class="fas fa-envelope"></i> Контакты</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Корзина</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-hero">
+            <h1>Свяжитесь с нами</h1>
+            <p>Мы всегда готовы ответить на ваши вопросы и помочь с выбором аромата. Выберите удобный способ связи или заполните форму обратной связи.</p>
+        </section>
+
+        <div class="contact-container">
+            <section class="contact-info">
+                <div class="info-card">
+                    <h3><i class="fas fa-map-marker-alt"></i> Адрес магазина</h3>
+                    <p>г. Москва, ул. Арбат, д. 1</p>
+                    <p>Ближайшее метро: Арбатская</p>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.772190462044!2d37.5892!3d55.7494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQ0JzU3LjgiTiAzN8KwMzUnMzEuMSJF!5e0!3m2!1sru!2sru!4v1620000000000!5m2!1sru!2sru" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3><i class="fas fa-clock"></i> Часы работы</h3>
+                    <div class="working-hours">
+                        <p>
+                            <span>Понедельник - Пятница:</span>
+                            <span>10:00 - 20:00</span>
+                        </p>
+                        <p>
+                            <span>Суббота:</span>
+                            <span>11:00 - 19:00</span>
+                        </p>
+                        <p>
+                            <span>Воскресенье:</span>
+                            <span>12:00 - 18:00</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3><i class="fas fa-phone-alt"></i> Контактная информация</h3>
+                    <p><i class="fas fa-phone"></i> +7 (951) 074-24-72</p>
+                    <p><i class="fas fa-envelope"></i> samohvalovkirill097@gmail.com</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="ВКонтакте"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="social-link" title="Telegram"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-form">
+                <h2>Форма обратной связи</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="Введите ваш email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Введите ваш телефон">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Тема обращения</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Выберите тему</option>
+                            <option value="order">Вопрос по заказу</option>
+                            <option value="delivery">Доставка</option>
+                            <option value="product">Вопрос о товаре</option>
+                            <option value="other">Другое</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Сообщение</label>
+                        <textarea id="message" name="message" required placeholder="Введите ваше сообщение"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Отправить сообщение
+                    </button>
+                </form>
+            </section>
+        </div>
+
+        <section class="how-to-find">
+            <div class="how-to-find-container">
+                <h2>Как нас найти</h2>
+                
+                <div class="find-grid">
+                    <div class="find-card">
+                        <div class="find-icon">
+                            <i class="fas fa-subway"></i>
+                        </div>
+                        <h3>На метро</h3>
+                        <div class="find-content">
+                            <p>Ближайшие станции метро:</p>
+                            <ul>
+                                <li><strong>Арбатская</strong> (Филевская линия) - 5 минут пешком</li>
+                                <li><strong>Арбатская</strong> (Арбатско-Покровская линия) - 7 минут пешком</li>
+                                <li><strong>Смоленская</strong> (Филевская линия) - 10 минут пешком</li>
+                            </ul>
+                            <p class="find-note">Выход из метро "Арбатская" (Филевская линия) на ул. Арбат</p>
+                        </div>
+                    </div>
+
+                    <div class="find-card">
+                        <div class="find-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3>На автомобиле</h3>
+                        <div class="find-content">
+                            <p>Мы находимся в центре города:</p>
+                            <ul>
+                                <li>С Нового Арбата: поворот на ул. Арбат</li>
+                                <li>С Садового кольца: съезд на ул. Арбат</li>
+                            </ul>
+                            <p class="find-note">Рядом с магазином есть парковка (платная)</p>
+                            <div class="parking-info">
+                                <p><i class="fas fa-parking"></i> Парковка "Арбат Плаза"</p>
+                                <p><i class="fas fa-clock"></i> Круглосуточно</p>
+                                <p><i class="fas fa-ruble-sign"></i> 300 ₽/час</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="find-card">
+                        <div class="find-icon">
+                            <i class="fas fa-bus"></i>
+                        </div>
+                        <h3>На общественном транспорте</h3>
+                        <div class="find-content">
+                            <p>Автобусы и троллейбусы:</p>
+                            <ul>
+                                <li><strong>Автобусы:</strong> м2, м27 (остановка "Арбат")</li>
+                                <li><strong>Троллейбусы:</strong> 2, 44 (остановка "Арбат")</li>
+                            </ul>
+                            <p class="find-note">Выход на ул. Арбат, далее 3 минуты пешком</p>
+                        </div>
+                    </div>
+
+                    <div class="find-card">
+                        <div class="find-icon">
+                            <i class="fas fa-walking"></i>
+                        </div>
+                        <h3>Пешком</h3>
+                        <div class="find-content">
+                            <p>От известных мест:</p>
+                            <ul>
+                                <li>От Театра Вахтангова - 3 минуты</li>
+                                <li>От ресторана "Прага" - 2 минуты</li>
+                                <li>От кинотеатра "Художественный" - 5 минут</li>
+                            </ul>
+                            <p class="find-note">Мы находимся в историческом здании с вывеской "Мир Парфюмерии"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="find-map-section">
+                    <div class="find-map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.772190462044!2d37.5892!3d55.7494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQ0JzU3LjgiTiAzN8KwMzUnMzEuMSJF!5e0!3m2!1sru!2sru!4v1620000000000!5m2!1sru!2sru" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div class="find-map-info">
+                        <h3>Схема проезда</h3>
+                        <div class="map-markers">
+                            <div class="map-marker">
+                                <i class="fas fa-store"></i>
+                                <span>Наш магазин</span>
+                            </div>
+                            <div class="map-marker">
+                                <i class="fas fa-subway"></i>
+                                <span>Станция метро</span>
+                            </div>
+                            <div class="map-marker">
+                                <i class="fas fa-parking"></i>
+                                <span>Парковка</span>
+                            </div>
+                            <div class="map-marker">
+                                <i class="fas fa-bus"></i>
+                                <span>Остановка транспорта</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reviews">
+            <div class="reviews-container">
+                <h2>Отзывы наших клиентов</h2>
+                
+                <div class="reviews-stats">
+                    <div class="stat-card">
+                        <div class="stat-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="stat-number">4.9</div>
+                        <div class="stat-label">Средняя оценка</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Положительных отзывов</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Всего отзывов</div>
+                    </div>
+                </div>
+
+                <div class="reviews-filter">
+                    <button class="filter-btn active" data-filter="all">Все отзывы</button>
+                    <button class="filter-btn" data-filter="positive">Положительные</button>
+                    <button class="filter-btn" data-filter="negative">Отрицательные</button>
+                    <button class="filter-btn" data-filter="recent">Новые</button>
+                </div>
+
+                <div class="reviews-grid">
+                    <!-- Отзывы будут добавлены через JavaScript -->
+                </div>
+
+                <div class="reviews-pagination">
+                    <!-- Кнопки пагинации будут добавлены через JavaScript -->
+                </div>
+
+                <div class="add-review">
+                    <h3>Оставить отзыв</h3>
+                    <form class="review-form" id="reviewForm">
+                        <div class="form-group">
+                            <label for="reviewer-name">Ваше имя *</label>
+                            <input type="text" id="reviewer-name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="reviewer-email">Email *</label>
+                            <input type="email" id="reviewer-email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Ваша оценка *</label>
+                            <div class="rating-select">
+                                <i class="far fa-star" data-rating="1"></i>
+                                <i class="far fa-star" data-rating="2"></i>
+                                <i class="far fa-star" data-rating="3"></i>
+                                <i class="far fa-star" data-rating="4"></i>
+                                <i class="far fa-star" data-rating="5"></i>
+                            </div>
+                            <input type="hidden" id="rating" name="rating" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="review-product">Выберите товар *</label>
+                            <select id="review-product" name="product" required>
+                                <option value="">Выберите товар</option>
+                                <!-- Список товаров будет добавлен через JavaScript -->
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="review-text">Ваш отзыв *</label>
+                            <textarea id="review-text" name="review" rows="5" required 
+                                placeholder="Расскажите о вашем опыте использования аромата..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-review-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Отправить отзыв
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>О компании</h4>
+                <p>Мир Парфюмерии — ваш надежный партнер в мире ароматов с 2010 года.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Контакты</h4>
+                <p><i class="fas fa-phone"></i> +7 (951) 074-24-72</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:samohvalovkirill097@gmail.com">samohvalovkirill097@gmail.com</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Мы в соцсетях</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Мир Парфюмерии. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Обработка формы обратной связи
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Здесь можно добавить отправку формы на сервер
+            alert('Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.');
+            this.reset();
+        });
+
+        // Инициализация карты
+        ymaps.ready(function () {
+            // Создаем карту
+            var myMap = new ymaps.Map('map', {
+                center: [55.751244, 37.618423], // Координаты центра Москвы
+                zoom: 12
+            });
+
+            // Создаем метку
+            var myPlacemark = new ymaps.Placemark([55.751244, 37.618423], {
+                // Хинт показывается при наведении на метку
+                hintContent: 'Мир Парфюмерии',
+                // Балун отображается при клике на метку
+                balloonContent: `
+                    <strong>Мир Парфюмерии</strong><br>
+                    г. Москва, ул. Ароматная, д. 15<br>
+                    <a href="tel:+79510742472">+7 (951) 074-24-72</a>
+                `
+            }, {
+                // Опции метки
+                iconLayout: 'default#image',
+                iconImageHref: 'img/map-marker.png', // Путь к изображению метки
+                iconImageSize: [40, 40], // Размеры изображения
+                iconImageOffset: [-20, -40] // Смещение изображения
+            });
+
+            // Добавляем метку на карту
+            myMap.geoObjects.add(myPlacemark);
+
+            // Центрируем карту по метке
+            myMap.setCenter([55.751244, 37.618423], 15);
+        });
+    </script>
+</body>
+</html>

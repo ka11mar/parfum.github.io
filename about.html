@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="О сайте Мир Парфюмерии — история, миссия и команда нашего парфюмерного магазина">
+    <meta name="keywords" content="о сайте, мир парфюмерии, история компании, парфюмерный магазин">
+    <title>О сайте | Мир Парфюмерии</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="css/brands.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .about-main {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        .about-layout {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+        .about-sidebar {
+            min-width: 260px;
+            max-width: 320px;
+            flex: 0 0 280px;
+            text-align: left;
+        }
+        .about-main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1rem;
+        }
+        .about-main-content .brands-main {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .about-main-content .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            justify-content: center;
+            width: 100%;
+            overflow: visible;
+        }
+        @media (max-width: 900px) {
+            .about-main-content .brands-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .about-main-content .brand-card {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+        .about-main h1, .about-main h2, .about-main h3, .about-main p {
+            text-align: center !important;
+        }
+        /* Достижения слева */
+        .about-main .brands-sidebar .sidebar-section .fa-star,
+        .about-main .brands-sidebar .sidebar-section h3:has(.fa-star),
+        .about-main .brands-sidebar .sidebar-section:has(.fa-star),
+        .about-main .brands-sidebar .sidebar-section:has(.stats-list),
+        .about-main .brands-sidebar .sidebar-section .stats-list,
+        .about-main .brands-sidebar .sidebar-section .stat-item {
+            text-align: left !important;
+            align-items: flex-start !important;
+            justify-content: flex-start !important;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="Мир Парфюмерии" /></a>
+            <h1>Мир Парфюмерии</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="catalog.html"><i class="fas fa-store"></i> Каталог</a></li>
+                <li><a href="brands.html"><i class="fas fa-tags"></i> Бренды</a></li>
+                <li><a href="articles.html"><i class="fas fa-newspaper"></i> Статьи</a></li>
+                <li><a href="about.html" class="active"><i class="fas fa-info-circle"></i> О сайте</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Контакты</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Корзина</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="about-main">
+        <div class="about-layout">
+            <aside class="about-sidebar">
+                <div class="brands-sidebar">
+                    <div class="sidebar-section">
+                        <h3><i class="fas fa-th-large"></i> Разделы</h3>
+                        <div class="brands-categories">
+                            <button class="category-btn active">
+                                <i class="fas fa-info-circle"></i> О нас
+                            </button>
+                            <button class="category-btn">
+                                <i class="fas fa-users"></i> Команда
+                            </button>
+                            <button class="category-btn">
+                                <i class="fas fa-certificate"></i> Сертификаты
+                            </button>
+                            <button class="category-btn">
+                                <i class="fas fa-handshake"></i> Партнеры
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3><i class="fas fa-star"></i> Достижения</h3>
+                        <div class="stats-list">
+                            <div class="stat-item">
+                                <i class="fas fa-store"></i>
+                                <span>13 лет на рынке</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-users"></i>
+                                <span>50000+ клиентов</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-flask"></i>
+                                <span>1000+ ароматов</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <div class="about-main-content">
+                <section class="brands-hero">
+                    <div class="hero-content">
+                        <h1>О нашем сайте</h1>
+                        <p>Ваш надежный проводник в мире изысканных ароматов с 2010 года</p>
+                        <div class="brands-search">
+                            <input type="text" placeholder="Поиск по сайту...">
+                            <button><i class="fas fa-search"></i> Найти</button>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="brands-container">
+                    <div class="brands-main">
+                        <div class="brands-grid">
+                            <!-- О нас -->
+                            <div class="brand-card" data-category="о-нас">
+                                <div class="brand-image">
+                                    <img src="img/guide1.jpg" alt="О нас" />
+                                </div>
+                                <div class="brand-info">
+                                    <h2>Наша миссия</h2>
+                                    <p>Мы стремимся сделать мир парфюмерии доступным для каждого, предлагая только оригинальные ароматы от ведущих мировых брендов</p>
+                                    <div class="brand-stats">
+                                        <span><i class="fas fa-heart"></i> Качество</span>
+                                        <span><i class="fas fa-shield-alt"></i> Гарантия</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="brand-card" data-category="о-нас">
+                                <div class="brand-image">
+                                    <img src="img/guide2.jpg" alt="Наши ценности" />
+                                </div>
+                                <div class="brand-info">
+                                    <h2>Наши ценности</h2>
+                                    <p>Мы гарантируем подлинность каждого аромата и обеспечиваем профессиональную консультацию</p>
+                                    <div class="brand-stats">
+                                        <span><i class="fas fa-check-circle"></i> Оригинальность</span>
+                                        <span><i class="fas fa-star"></i> Сервис</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Команда -->
+                            <div class="brand-card" data-category="команда">
+                                <div class="brand-image">
+                                    <img src="img/team-1.jpg" alt="Основатель" />
+                                </div>
+                                <div class="brand-info">
+                                    <h2>Самохвалов Кирилл</h2>
+                                    <p>Основатель компании, эксперт в области парфюмерии с многолетним опытом</p>
+                                    <div class="brand-stats">
+                                        <span><i class="fas fa-briefcase"></i> Основатель</span>
+                                        <span><i class="fas fa-calendar-alt"></i> с 2010</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="brand-card" data-category="команда">
+                                <div class="brand-image">
+                                    <img src="img/team-2.jpg" alt="Главный парфюмер" />
+                                </div>
+                                <div class="brand-info">
+                                    <h2>Чистяков Егор</h2>
+                                    <p>Главный парфюмер, специалист по подбору индивидуальных ароматов</p>
+                                    <div class="brand-stats">
+                                        <span><i class="fas fa-flask"></i> Парфюмер</span>
+                                        <span><i class="fas fa-award"></i> Эксперт</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="brand-card" data-category="команда">
+                                <div class="brand-image">
+                                    <img src="img/team-3.jpg" alt="Руководитель продаж" />
+                                </div>
+                                <div class="brand-info">
+                                    <h2>Морозов Тимур</h2>
+                                    <p>Руководитель отдела продаж, специалист по работе с клиентами</p>
+                                    <div class="brand-stats">
+                                        <span><i class="fas fa-users"></i> Продажи</span>
+                                        <span><i class="fas fa-chart-line"></i> Развитие</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Сертификаты -->
+                            <div class="brand-card" data-category="сертификаты">
+                                <div class="brand-image">
+                                    <img src="img/cert1.jpg" alt="Сертификат качества" />
+                                </div>
+                                <div class="brand-info">
+                                    <h2>Сертификат качества</h2>
+                                    <p>Подтверждение высокого качества нашей продукции и соответствия международным стандартам</p>
+                                    <div class="brand-stats">
+                                        <span><i class="fas fa-certificate"></i> ISO 9001</span>
+                                        <span><i class="fas fa-calendar-alt"></i> 2023</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="brand-card" data-category="сертификаты">
+                                <div class="brand-image">
+                                    <img src="img/cert2.jpg" alt="Сертификат дистрибьютора" />
+                                </div>
+                                <div class="brand-info">
+                                    <h2>Официальный дистрибьютор</h2>
+                                    <p>Прямые поставки от ведущих парфюмерных домов, гарантия подлинности продукции</p>
+                                    <div class="brand-stats">
+                                        <span><i class="fas fa-handshake"></i> Партнер</span>
+                                        <span><i class="fas fa-shield-alt"></i> Гарантия</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pagination">
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                    <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>О компании</h4>
+                <p>Мир Парфюмерии — ваш надежный партнер в мире ароматов с 2010 года.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Контакты</h4>
+                <p><i class="fas fa-phone"></i> +7 (951) 074-24-72</p>
+                <p><i class="fas fa-envelope"></i> samohvalovkirill097@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Мы в соцсетях</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Мир Парфюмерии. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            const cards = document.querySelectorAll('.brand-card');
+            const searchInput = document.querySelector('.brands-search input');
+            const searchButton = document.querySelector('.brands-search button');
+
+            // Фильтрация по категориям
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Удаляем активный класс у всех кнопок
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    // Добавляем активный класс нажатой кнопке
+                    button.classList.add('active');
+
+                    const category = button.textContent.trim().toLowerCase();
+                    
+                    cards.forEach(card => {
+                        const cardCategory = card.dataset.category;
+                        if (category === 'о нас' || cardCategory === category) {
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Поиск
+            function performSearch() {
+                const searchTerm = searchInput.value.toLowerCase();
+                
+                cards.forEach(card => {
+                    const title = card.querySelector('h2').textContent.toLowerCase();
+                    const description = card.querySelector('p').textContent.toLowerCase();
+                    
+                    if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+
+            searchInput.addEventListener('input', performSearch);
+            searchButton.addEventListener('click', performSearch);
+
+            // Анимация появления карточек
+            function animateCards() {
+                cards.forEach(card => {
+                    const cardPosition = card.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight;
+
+                    if (cardPosition < screenPosition) {
+                        card.classList.add('animate');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', animateCards);
+            animateCards(); // Первичная проверка при загрузке
+        });
+    </script>
+</body>
+</html>

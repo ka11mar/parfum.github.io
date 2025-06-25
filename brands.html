@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Бренды парфюмерии — каталог ведущих производителей ароматов. Оригинальная парфюмерия от известных домов моды.">
+    <meta name="keywords" content="бренды парфюмерии, парфюмерные дома, духи, ароматы">
+    <title>Бренды парфюмерии | Мир Парфюмерии</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/brands.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="Мир Парфюмерии" /></a>
+            <h1>Мир Парфюмерии</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="catalog.html"><i class="fas fa-store"></i> Каталог</a></li>
+                <li><a href="brands.html" class="active"><i class="fas fa-tags"></i> Бренды</a></li>
+                <li><a href="articles.html"><i class="fas fa-newspaper"></i> Статьи</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> О сайте</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Контакты</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Корзина</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="brands-hero">
+            <div class="hero-content">
+                <h1>Бренды парфюмерии</h1>
+                <p>Откройте для себя мир изысканных ароматов от ведущих парфюмерных домов. Мы представляем только оригинальную парфюмерию от известных брендов.</p>
+                <div class="brands-search">
+                    <input type="text" placeholder="Поиск брендов...">
+                    <button><i class="fas fa-search"></i> Найти</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="brands-container">
+            <aside class="brands-sidebar">
+                <div class="sidebar-section">
+                    <h3><i class="fas fa-th-large"></i> Категории</h3>
+                    <div class="brands-categories">
+                        <button class="category-btn active">
+                            <i class="fas fa-crown"></i> Люкс
+                        </button>
+                        <button class="category-btn">
+                            <i class="fas fa-star"></i> Нишевые
+                        </button>
+                        <button class="category-btn">
+                            <i class="fas fa-gem"></i> Премиум
+                        </button>
+                        <button class="category-btn">
+                            <i class="fas fa-award"></i> Классические
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3><i class="fas fa-filter"></i> Фильтры</h3>
+                    <div class="filter-group">
+                        <label>Страна</label>
+                        <select>
+                            <option value="">Все страны</option>
+                            <option value="france">Франция</option>
+                            <option value="italy">Италия</option>
+                            <option value="uk">Великобритания</option>
+                            <option value="usa">США</option>
+                            <option value="germany">Германия</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Год основания</label>
+                        <select>
+                            <option value="">Все годы</option>
+                            <option value="1800-1900">1800-1900</option>
+                            <option value="1901-1950">1901-1950</option>
+                            <option value="1951-2000">1951-2000</option>
+                            <option value="2001+">После 2000</option>
+                        </select>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="brands-main">
+                <div class="brands-grid">
+                    <!-- Люкс бренды -->
+                    <div class="brand-card" data-category="люкс">
+                        <div class="brand-image">
+                            <img src="img/chanel.jpg" alt="Chanel" />
+                        </div>
+                        <div class="brand-info">
+                            <h2>Chanel</h2>
+                            <p>Французский дом моды, создающий изысканные ароматы с 1921 года</p>
+                            <div class="brand-stats">
+                                <span><i class="fas fa-map-marker-alt"></i> Франция</span>
+                                <span><i class="fas fa-calendar-alt"></i> 1910</span>
+                            </div>
+                            <button class="view-collection">Смотреть коллекцию</button>
+                        </div>
+                    </div>
+
+                    <div class="brand-card" data-category="люкс">
+                        <div class="brand-image">
+                            <img src="img/dior.jpg" alt="Dior" />
+                        </div>
+                        <div class="brand-info">
+                            <h2>Dior</h2>
+                            <p>Французский бренд, известный своими роскошными ароматами</p>
+                            <div class="brand-stats">
+                                <span><i class="fas fa-map-marker-alt"></i> Франция</span>
+                                <span><i class="fas fa-calendar-alt"></i> 1947</span>
+                            </div>
+                            <button class="view-collection">Смотреть коллекцию</button>
+                        </div>
+                    </div>
+
+                    <!-- Нишевые бренды -->
+                    <div class="brand-card" data-category="нишевые">
+                        <div class="brand-image">
+                            <img src="img/creed.jpg" alt="Creed" />
+                        </div>
+                        <div class="brand-info">
+                            <h2>Creed</h2>
+                            <p>Британский нишевый бренд с богатой историей создания парфюмерии</p>
+                            <div class="brand-stats">
+                                <span><i class="fas fa-map-marker-alt"></i> Великобритания</span>
+                                <span><i class="fas fa-calendar-alt"></i> 1760</span>
+                            </div>
+                            <button class="view-collection">Смотреть коллекцию</button>
+                        </div>
+                    </div>
+
+                    <div class="brand-card" data-category="нишевые">
+                        <div class="brand-image">
+                            <img src="img/amouage.jpg" alt="Amouage" />
+                        </div>
+                        <div class="brand-info">
+                            <h2>Amouage</h2>
+                            <p>Оманский бренд, создающий роскошные восточные ароматы</p>
+                            <div class="brand-stats">
+                                <span><i class="fas fa-map-marker-alt"></i> Оман</span>
+                                <span><i class="fas fa-calendar-alt"></i> 1983</span>
+                            </div>
+                            <button class="view-collection">Смотреть коллекцию</button>
+                        </div>
+                    </div>
+
+                    <!-- Премиум бренды -->
+                    <div class="brand-card" data-category="премиум">
+                        <div class="brand-image">
+                            <img src="img/balenciaga.jpg" alt="Balenciaga" />
+                        </div>
+                        <div class="brand-info">
+                            <h2>Balenciaga</h2>
+                            <p>Испанский дом моды с современными ароматами</p>
+                            <div class="brand-stats">
+                                <span><i class="fas fa-map-marker-alt"></i> Испания</span>
+                                <span><i class="fas fa-calendar-alt"></i> 1919</span>
+                            </div>
+                            <button class="view-collection">Смотреть коллекцию</button>
+                        </div>
+                    </div>
+
+                    <div class="brand-card" data-category="премиум">
+                        <div class="brand-image">
+                            <img src="img/margiela.jpg" alt="Maison Margiela" />
+                        </div>
+                        <div class="brand-info">
+                            <h2>Maison Margiela</h2>
+                            <p>Французский бренд с концептуальными ароматами</p>
+                            <div class="brand-stats">
+                                <span><i class="fas fa-map-marker-alt"></i> Франция</span>
+                                <span><i class="fas fa-calendar-alt"></i> 1988</span>
+                            </div>
+                            <button class="view-collection">Смотреть коллекцию</button>
+                        </div>
+                    </div>
+
+                    <!-- Классические бренды -->
+                    <div class="brand-card" data-category="классические">
+                        <div class="brand-image">
+                            <img src="img/zara.jpg" alt="Zara" />
+                        </div>
+                        <div class="brand-info">
+                            <h2>Zara</h2>
+                            <p>Испанский бренд с доступными ароматами</p>
+                            <div class="brand-stats">
+                                <span><i class="fas fa-map-marker-alt"></i> Испания</span>
+                                <span><i class="fas fa-calendar-alt"></i> 1975</span>
+                            </div>
+                            <button class="view-collection">Смотреть коллекцию</button>
+                        </div>
+                    </div>
+
+                    <div class="brand-card" data-category="классические">
+                        <div class="brand-image">
+                            <img src="img/vetements.jpg" alt="Vetements" />
+                        </div>
+                        <div class="brand-info">
+                            <h2>Vetements</h2>
+                            <p>Современный бренд с уникальными ароматами</p>
+                            <div class="brand-stats">
+                                <span><i class="fas fa-map-marker-alt"></i> Франция</span>
+                                <span><i class="fas fa-calendar-alt"></i> 2014</span>
+                            </div>
+                            <button class="view-collection">Смотреть коллекцию</button>
+                        </div>
+                    </div>
+
+                    <div class="brand-card" data-category="классические">
+                        <div class="brand-image">
+                            <img src="img/rick-owens.jpg" alt="Rick Owens" />
+                        </div>
+                        <div class="brand-info">
+                            <h2>Rick Owens</h2>
+                            <p>Американский дизайнер с минималистичными ароматами</p>
+                            <div class="brand-stats">
+                                <span><i class="fas fa-map-marker-alt"></i> США</span>
+                                <span><i class="fas fa-calendar-alt"></i> 1994</span>
+                            </div>
+                            <button class="view-collection">Смотреть коллекцию</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pagination">
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>О компании</h4>
+                <p>Мир Парфюмерии — ваш надежный партнер в мире ароматов с 2010 года.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Контакты</h4>
+                <p><i class="fas fa-phone"></i> +7 (951) 074-24-72</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:samohvalovkirill097@gmail.com">samohvalovkirill097@gmail.com</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Мы в соцсетях</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Мир Парфюмерии. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/brands.js"></script>
+</body>
+</html>

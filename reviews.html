@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Отзывы клиентов о парфюмерии и ароматах в магазине Мир Парфюмерии">
+    <meta name="keywords" content="отзывы, парфюмерия, ароматы, мнения покупателей">
+    <title>Отзывы - Мир Парфюмерии</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reviews.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="css/notifications.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="Мир Парфюмерии" /></a>
+            <h1>Мир Парфюмерии</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="catalog.html"><i class="fas fa-store"></i> Каталог</a></li>
+                <li><a href="brands.html"><i class="fas fa-tags"></i> Бренды</a></li>
+                <li><a href="articles.html"><i class="fas fa-newspaper"></i> Статьи</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> О сайте</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Контакты</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Корзина</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="reviews">
+            <div class="reviews-container">
+                <h2>Отзывы наших клиентов</h2>
+                
+                <!-- Статистика отзывов -->
+                <div class="reviews-stats">
+                    <div class="stat-card">
+                        <div class="stat-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="stat-number">4.9</div>
+                        <div class="stat-label">Средняя оценка</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Положительных отзывов</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Всего отзывов</div>
+                    </div>
+                </div>
+
+                <!-- Фильтры отзывов -->
+                <div class="reviews-filter">
+                    <button class="filter-btn active" data-filter="all">Все отзывы</button>
+                    <button class="filter-btn" data-filter="positive">Положительные</button>
+                    <button class="filter-btn" data-filter="negative">Отрицательные</button>
+                    <button class="filter-btn" data-filter="recent">Новые</button>
+                </div>
+
+                <!-- Карточка товара -->
+                <div class="product-card" style="max-width:340px;margin:0 auto 2.5rem auto;box-shadow:0 2px 8px rgba(0,0,0,0.07);border-radius:14px;overflow:hidden;background:#fff;">
+                    <div class="product-image" style="background:#f7f7f7;padding:1.5rem 0;text-align:center;">
+                        <img src="img/chanel-no5.jpg" alt="Chanel No. 5" style="width:120px;height:120px;object-fit:cover;border-radius:10px;">
+                    </div>
+                    <div class="product-info" style="padding:1.2rem 1.5rem 1.5rem 1.5rem;">
+                        <h3 style="margin:0 0 0.5rem 0;font-size:1.2rem;">Chanel No. 5</h3>
+                        <div style="color:#888;font-size:0.98rem;margin-bottom:0.7rem;">Легендарный женский аромат с нотами альдегидов и жасмина</div>
+                        <div style="display:flex;align-items:center;gap:0.7rem;margin-bottom:1rem;">
+                            <span style="font-weight:500;font-size:1.1rem;">9500 ₽</span>
+                            <span style="color:#FFD700;"><i class="fas fa-star"></i> 4.9</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Сетка отзывов -->
+                <div class="reviews-grid">
+                    <!-- Пример отзыва -->
+                    <div class="review-card" data-category="positive">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <img src="img/avatars/user1.jpg" alt="Аватар пользователя" class="reviewer-avatar">
+                                <div class="reviewer-details">
+                                    <h4>Анна К.</h4>
+                                    <div class="review-date">15 марта 2024</div>
+                                </div>
+                            </div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            Отличный магазин! Быстрая доставка, оригинальная продукция. Особенно понравился аромат Chanel No. 5, полностью соответствует описанию.
+                        </div>
+                        <div class="review-footer">
+                            <div class="review-product">
+                                <i class="fas fa-tag"></i>
+                                Chanel No. 5
+                            </div>
+                            <button class="helpful-btn">
+                                <i class="fas fa-thumbs-up"></i>
+                                <span class="helpful-count">12</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Пагинация -->
+                <div class="reviews-pagination">
+                    <button class="pagination-btn active">1</button>
+                    <button class="pagination-btn">2</button>
+                    <button class="pagination-btn">3</button>
+                    <button class="pagination-btn">...</button>
+                    <button class="pagination-btn">10</button>
+                </div>
+
+                <!-- Форма добавления отзыва -->
+                <div class="add-review">
+                    <h3>Оставить отзыв</h3>
+                    <form class="review-form" id="reviewForm">
+                        <div class="form-group">
+                            <label for="reviewer-name">Ваше имя *</label>
+                            <input type="text" id="reviewer-name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="reviewer-email">Email *</label>
+                            <input type="email" id="reviewer-email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Ваша оценка *</label>
+                            <div class="rating-select">
+                                <i class="far fa-star" data-rating="1"></i>
+                                <i class="far fa-star" data-rating="2"></i>
+                                <i class="far fa-star" data-rating="3"></i>
+                                <i class="far fa-star" data-rating="4"></i>
+                                <i class="far fa-star" data-rating="5"></i>
+                            </div>
+                            <input type="hidden" id="rating" name="rating" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="review-product">Выберите товар *</label>
+                            <select id="review-product" name="product" required>
+                                <option value="">Выберите товар</option>
+                                <option value="chanel-no5">Chanel No. 5</option>
+                                <option value="dior-jadore">Dior J'adore</option>
+                                <option value="lancome-la-vie">Lancôme La Vie Est Belle</option>
+                                <option value="dior-sauvage">Dior Sauvage</option>
+                                <option value="chanel-bleu">Chanel Bleu de Chanel</option>
+                                <option value="gucci-guilty">Gucci Guilty</option>
+                                <option value="tom-ford-black-orchid">Tom Ford Black Orchid</option>
+                                <option value="byredo-gypsy-water">Byredo Gypsy Water</option>
+                                <option value="le-labo-santal">Le Labo Santal 33</option>
+                                <option value="creed-aventus">Creed Aventus</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="review-text">Ваш отзыв *</label>
+                            <textarea id="review-text" name="review" rows="5" required 
+                                placeholder="Расскажите о вашем опыте использования аромата..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-review-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Отправить отзыв
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>О компании</h4>
+                <p>Мир Парфюмерии — ваш надежный партнер в мире ароматов с 2010 года.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Контакты</h4>
+                <p><i class="fas fa-phone"></i> +7 (951) 074-24-72</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:samohvalovkirill097@gmail.com">samohvalovkirill097@gmail.com</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Мы в соцсетях</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Мир Парфюмерии. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/reviews.js"></script>
+</body>
+</html> 

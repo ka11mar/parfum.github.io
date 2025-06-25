@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина | Мир Парфюмерии</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/brands.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="Мир Парфюмерии"/></a>
+            <h1>Мир Парфюмерии</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="catalog.html"><i class="fas fa-store"></i> Каталог</a></li>
+                <li><a href="brands.html"><i class="fas fa-tags"></i> Бренды</a></li>
+                <li><a href="articles.html"><i class="fas fa-newspaper"></i> Статьи</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> О сайте</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Контакты</a></li>
+                <li><a href="cart.html" class="active"><i class="fas fa-shopping-cart"></i> Корзина</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="brands-hero">
+            <div class="hero-content">
+                <h1>Ваша корзина</h1>
+                <p>Проверьте товары перед оформлением заказа</p>
+            </div>
+        </section>
+        <div class="brands-container">
+            <aside class="brands-sidebar">
+                <div class="sidebar-section">
+                    <h3><i class="fas fa-info-circle"></i> Информация</h3>
+                    <p>Здесь отображаются товары, которые вы добавили в корзину. Вы можете изменить количество или удалить товар.</p>
+                </div>
+            </aside>
+            <div class="brands-main" id="cartItems"></div>
+        </div>
+    </main>
+    <script>
+    function renderCart() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const cartItems = document.getElementById('cartItems');
+        cartItems.innerHTML = '';
+        let total = 0;
+        if(cart.length === 0) {
+            cartItems.innerHTML = '<div class="brand-card" style="text-align:center;padding:3rem 1rem;"><i class="fas fa-shopping-basket" style="font-size:3rem;color:#bbb;margin-bottom:1rem;"></i><br>Корзина пуста</div>';
+            return;
+        }
+        cart.forEach((item, idx) => {
+            total += item.price * item.quantity;
+            const div = document.createElement('div');
+            div.className = 'brand-card';
+            div.innerHTML = `
+                <div class="brand-image"><img src="${item.image}" alt="${item.name}" /></div>
+                <div class="brand-info">
+                    <h2>${item.name}</h2>
+                    <div class="brand-stats">
+                        <span>${item.volume} мл</span>
+                        <span style="font-weight:600;">${item.price} ₽</span>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:0.7rem;margin-top:1rem;">
+                        <button class="category-btn" style="width:38px;height:38px;border-radius:50%;padding:0;display:flex;align-items:center;justify-content:center;font-size:1.1rem;" onclick="updateQty(${idx},-1)"><i class='fas fa-minus'></i></button>
+                        <span style="min-width:2.5em;text-align:center;">${item.quantity}</span>
+                        <button class="category-btn" style="width:38px;height:38px;border-radius:50%;padding:0;display:flex;align-items:center;justify-content:center;font-size:1.1rem;" onclick="updateQty(${idx},1)"><i class='fas fa-plus'></i></button>
+                        <button class="category-btn" style="width:38px;height:38px;border-radius:50%;padding:0;display:flex;align-items:center;justify-content:center;font-size:1.1rem;background:#e74c3c;color:#fff;" title="Удалить" onclick="removeItem(${idx})"><i class="fas fa-trash"></i></button>
+                    </div>
+                </div>
+            `;
+            cartItems.appendChild(div);
+        });
+        // Итоговая сумма и кнопка заказа
+        const totalDiv = document.createElement('div');
+        totalDiv.className = 'brand-card';
+        totalDiv.style.textAlign = 'center';
+        totalDiv.style.marginTop = '2rem';
+        totalDiv.innerHTML = `
+            <h2 style="margin-bottom:1.2rem;">Итого: <span style="font-weight:700;">${total} ₽</span></h2>
+            <button class="category-btn" style="width:100%;font-size:1.1rem;padding:1rem 0;margin-top:1rem;background:#181818;color:#fff;"><i class="fas fa-credit-card"></i> Оформить заказ</button>
+        `;
+        cartItems.appendChild(totalDiv);
+    }
+    function updateQty(idx, delta) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart[idx].quantity += delta;
+        if(cart[idx].quantity < 1) cart[idx].quantity = 1;
+        localStorage.setItem('cart', JSON.stringify(cart));
+        renderCart();
+    }
+    function removeItem(idx) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.splice(idx,1);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        renderCart();
+    }
+    document.addEventListener('DOMContentLoaded', renderCart);
+    </script>
+</body>
+</html> 
